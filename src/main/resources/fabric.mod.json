@@ -1,0 +1,48 @@
+{
+	"schemaVersion": 1,
+	"id": "idarko-enjoyer",
+	"version": "${version}",
+	"name": "IDarko enjoyer",
+	"description": "ciao IDarko questa è una mod di jojo: non bannarmi",
+	"authors": [
+		"gabtie",
+		"duracell",
+		"DJtome/edvin tanto sono agordini",
+		"nellopopper non trova il piccone, scusatelo",
+		"albids/the verde "
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/idarko-enjoyer/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.idarkoenjoyer.ExampleMod"
+		],
+		"client": [
+			"com.idarkoenjoyer.ExampleModClient"
+		],
+		"fabric-datagen": [
+			"com.idarkoenjoyer.ExampleModDataGenerator"
+		]
+	},
+	"mixins": [
+		"idarko-enjoyer.mixins.json",
+		{
+			"config": "idarko-enjoyer.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
